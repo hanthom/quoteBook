@@ -1,1 +1,3 @@
-dataService.js
+angular.module('quoteBook').service('', function() {
+
+});
