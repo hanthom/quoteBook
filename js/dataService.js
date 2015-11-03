@@ -20,13 +20,13 @@ angular.module('quoteBook').service('DataService', function() {
   		}
   	};
 
-  	// this.removeData = function(text) {
-  	// 	for (var i=0; i < quotes.length; i++) {
-  	// 		if (quotes[i][text] === text) {
-  	// 			quotes.splice(i, 1);
-  	// 			i--;
-  	// 		}
-  	// 	}
-  	// };
+  	this.removeData = function(byeQuote) {
+  		for (var i=0; i < quotes.length; i++) {
+  			if (quotes[i].text === byeQuote) {
+  				quotes.splice(i, 1);
+  				i--;
+  			}
+  		}
+  	};
 
 });

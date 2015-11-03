@@ -15,8 +15,14 @@ angular.module('quoteBook').controller('mainCtrl', function($scope, DataService)
 		};
 	};
 
-	// $scope.removeQuote = function(quote) {
-	// 	$scope.removeData(input);
-	// };
+	$scope.removeQuote = function(byeQuote) {
+		DataService.removeData($scope.byeQuote);
+		$scope.newQuote = {
+			text: "",
+			author: ""
+		};
+	};
+	
+	$scope.showHide = false;
 
 });

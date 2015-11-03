@@ -2,6 +2,13 @@ html {
 	background-color: green;
 }
 
-/*li {
-	text-align: center;
-}*/
+div {
+	display: block;
+	width: 200px;
+	height: 75px;
+	border: 2px solid red;
+	background-color: blue;
+	margin: auto;
+	padding: auto;
+
+}
