@@ -6,7 +6,14 @@
 </head>
 <body ng-app="quoteBook" ng-controller="mainCtrl">
 
+	<input ng-model="input"/>
+	<button ng-click="addData(input)">Add Quote</button>
+	<button ng-click="removeData(input)">Remove Quote</button>
+	<button ng-click="filterQuotes">Filter Quotes</button>
 
+	<ul>
+		<li ng-repeat="quote in quotes | filter: input"> Text: {{quote.text}} ~ {{quote.author}}</li>
+	</ul>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>

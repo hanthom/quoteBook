@@ -1,5 +1,5 @@
-angular.module('quoteBook').controller('mainCtrl', function($scope) {
+angular.module('quoteBook').controller('mainCtrl', function($scope, DataService) {
 
-	$scope.
+	$scope.quotes = DataService.getData();
 
 });
