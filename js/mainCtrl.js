@@ -22,7 +22,22 @@ angular.module('quoteBook').controller('mainCtrl', function($scope, DataService)
 			author: ""
 		};
 	};
-	
-	$scope.showHide = false;
+
+	$scope.showHide = {
+		add: false,
+		remove: false,
+		filter: false
+	};
+
+	$scope.toggleOptions = function(action) {
+		for(x in $scope.showHide) {
+			if (action !== x) {
+				$scope.showHide[x] = false;
+			}
+			else {
+				$scope.showHide[action] = !$scope.showHide[action];
+			}
+		}
+	};
 
 });

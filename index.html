@@ -6,25 +6,30 @@
 </head>
 <body ng-app="quoteBook" ng-controller="mainCtrl">
 
-	<select>
+<!-- 	<select>
 		<option></option>
-		<option>Add Quote</option>
-		<option>Remove Quote</option>
-		<option>Filter Quotes</option>
-	</select>
+		<option value="">Add Quote</option>
+		<option value="">Remove Quote</option>
+		<option value="">Filter Quotes</option>
+	</select> -->
+	<button ng-click="toggleOptions('add')">Add Quote</button>
+	<button ng-click="toggleOptions('remove')">Remove Quote</button>
+	<button ng-click="toggleOptions('filter')">Filter Quotes</button>
 
-	<div ng-show="showHide">
+	<div ng-show="showHide.add">
 		<input ng-model="newQuote.text" placeholder="Quote"/>
 		<input ng-model="newQuote.author" placeholder="Author"/>
 		<button ng-click="addQuote()">Add Quote</button>
 	</div>
 
-	<div ng-show="showHide">
+	
+	<div ng-show="showHide.remove">
 		<input ng-model="byeQuote" placeholder="Quote to Remove"/>
 		<button ng-click="removeQuote()">Remove Quote</button>
 	</div> 
 
-	<div ng-show="showHide">
+	
+	<div ng-show="showHide.filter">
 		<input ng-model="search.text" placeholder="Search by Quote"/>
 		<input ng-model="search.author" placeholder="Search by Author"/>
 		<button ng-click="filterQuotes">Filter Quotes</button>
