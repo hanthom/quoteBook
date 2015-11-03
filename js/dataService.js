@@ -14,19 +14,19 @@ angular.module('quoteBook').service('DataService', function() {
   		return quotes;
   	};
 
-  	this.addData = function(quoteObj) {
-  		if (quoteObj.text && quoteObj.author) {
-  			quotes.push(quoteObj);
+  	this.addData = function(newQuote) {
+  		if (newQuote.text && newQuote.author) {
+  			quotes.push(newQuote);
   		}
   	};
 
-  	this.removeData = function(text) {
-  		for (var i=0; i < quotes.length; i++) {
-  			if (quotes[i][text] === text) {
-  				quotes.splice(i, 1);
-  				i--;
-  			}
-  		}
-  	};
+  	// this.removeData = function(text) {
+  	// 	for (var i=0; i < quotes.length; i++) {
+  	// 		if (quotes[i][text] === text) {
+  	// 			quotes.splice(i, 1);
+  	// 			i--;
+  	// 		}
+  	// 	}
+  	// };
 
 });

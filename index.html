@@ -6,9 +6,10 @@
 </head>
 <body ng-app="quoteBook" ng-controller="mainCtrl">
 
-	<input ng-model="input"/>
-	<button ng-click="addData(input)">Add Quote</button>
-	<button ng-click="removeData(input)">Remove Quote</button>
+	<input ng-model="newQuote.text" placeholder="Quote"/>
+	<input ng-model="newQuote.author" placeholder="Author"/>
+	<button ng-click="addQuote()">Add Quote</button>
+	<button ng-click="removeQuote(input)">Remove Quote</button>
 	<button ng-click="filterQuotes">Filter Quotes</button>
 
 	<ul>
