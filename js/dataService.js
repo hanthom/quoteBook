@@ -10,6 +10,12 @@ angular.module('quoteBook').service('DataService', function() {
 	    { text: 'What even is a jQuery?', author: 'Tyler S. McGinnis'}
   	];
 
+//  var sendToLocal = funciton(quotes) {
+//    localStorage.setItem('quotes', JSON.stringify(quotes));
+//   }
+
+//  var quotesFromLocal = JSON.parse(localStorage.getItem('quotes'));
+
   	this.getData = function() {
   		return quotes;
   	};
@@ -30,3 +36,5 @@ angular.module('quoteBook').service('DataService', function() {
   	};
 
 });
+
+
